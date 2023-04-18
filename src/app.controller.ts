@@ -6,7 +6,8 @@ export class AppController {
   constructor(private readonly appService: AppService) {}
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+  getHello(): { message: string } {
+    // return this.appService.getHello();
+    return { message: 'Probando socket.io' };
   }
 }
